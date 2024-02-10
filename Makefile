@@ -1,5 +1,5 @@
 #--------------------------
-# xebro GmbH - nginx-php - 0.0.1
+# xebro GmbH - php-fpm - 0.0.1
 #--------------------------
 
 #RUN_ARGS := $(wordlist 2,$(words $(MAKECMDGOALS)),$(MAKECMDGOALS))
@@ -53,6 +53,7 @@ php.logs:
 build: php.build.dev
 
 php.install:
+	$(call headline,"Installing php-fpm")
 	$(call add_config,".env","docker/php-fpm/.env")
 
 install: php.install

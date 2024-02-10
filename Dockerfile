@@ -4,7 +4,6 @@ MAINTAINER Daniel Langemann <daniel@xebro.de>
 
 ARG XEBRO_VERSION
 
-LABEL de.xebro.company="xebro"
 LABEL de.xebro.version=$XEBRO_VERSION
 
 ENV USER_GID 1000
