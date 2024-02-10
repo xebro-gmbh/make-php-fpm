@@ -1,0 +1,22 @@
+services:
+  php-fpm:
+    image: ${XEBRO_PROJECT_NAME}_php:${XEBRO_VERSION}
+    build:
+      context: ${XEBRO_ROOT_DIR}/docker/php-fpm/
+      dockerfile: Dockerfile
+      target: dev
+    volumes:
+      - /var/docker/composer:/composer_data:rw
+      - ${XEBRO_ROOT_DIR}:/var/www/html:rw
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    env_file:
+      - ${XEBRO_ROOT_DIR}/.env
+      - ${XEBRO_ROOT_DIR}/.env.local
+    environment:
+      USER_GID: ${USER_GID}      
+      USER_UID: ${USER_UID}
+networks:
+  default:
+    external: true
+    name: ${XEBRO_PROJECT_NAME}
