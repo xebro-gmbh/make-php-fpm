@@ -7,7 +7,7 @@ services:
       target: dev
     volumes:
       - /var/docker/composer:/composer_data:rw
-      - ${XEBRO_ROOT_DIR}:/var/www/html:rw
+      - ${XEBRO_ROOT_DIR}${XEBRO_PHP_PATH}:/var/www/html:rw
     extra_hosts:
       - "host.docker.internal:host-gateway"
     env_file:
