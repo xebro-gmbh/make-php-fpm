@@ -10,15 +10,15 @@ This bundle could be used standalone or for your cli php scripts or as part of a
 
 #### Solo install
 ```bash
-make docker/php-fpm
+composer require xebro-gmbh/make-php-fpm
 ```
 
 #### Webserver install
 
 ```bash
-make docker/traefik
-make docker/nginx-php
-make docker/php-fpm
+composer require xebro-gmbh/make-traefik
+composer require xebro-gmbh/make-nginx-php
+composer require xebro-gmbh/make-php-fpm
 ```
 
-There are more aditional bundles, like `docker/mailcatcher` or `docker/mariadb` for example.
+There are more aditional bundles, like `xebro-gmbh/make-mailcatcher` or `xebro-gmbh/make-mariadb` for example.

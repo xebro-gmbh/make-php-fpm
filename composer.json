@@ -1,0 +1,15 @@
+{
+    "name": "xebro-gmbh/make-php-fpm",
+    "description": "Makefiles for development environment setup",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "DAN",
+            "email": "hello@xebro.de"
+        }
+    ],
+    "require": {},
+    "scripts": {
+    }
+}
